@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("./../../../public/fonts/Montserrat-Bold.ttf");
+ }
+
+.main {
+  background-color: #161516;
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  color: #FFFFFF;
+  padding: 54px 0 67px 0;
+}
+
+.header {
+  height: 173px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-family: Montserrat-Bold;
+  font-size: 31px;
+  line-height: 38px;
+}
+
+.products-list {
+  height: calc(100vh - 173px);
+}
