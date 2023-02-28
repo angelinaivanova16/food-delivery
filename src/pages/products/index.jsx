@@ -7,12 +7,12 @@ function Products () {
       <div className='container'>
         <header className='header'>
           <h1 className='header-title'>наша продукция</h1>
-          <div className="">
-            <div>
+          <div className="header-bascket">
+            <div className='header-bascket-text'>
               <p>3 товара</p>
               <p>на сумму 3 500 ₽</p>
             </div>
-            <div></div>
+            <div className='header-bascket-image'></div>
           </div>
         </header>
 
