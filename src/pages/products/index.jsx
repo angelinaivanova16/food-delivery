@@ -1,4 +1,5 @@
 import './products.css'
+import { products } from '../../products';
 import Card from '../../components/elements/card';
 
 function Products () {
@@ -17,14 +18,17 @@ function Products () {
         </header>
 
         <div className='products-list'>
-          <Card img="/images/oysters.png" title="Устрицы по рокфеллеровски" description="Значимость этих проблем настолько очевидна, что укрепление и развитие структуры " price="2 700" weight="500"/>
-          <Card img="/images/ribs.png" title="Свиные ребрышки на гриле с зеленью" description="Не следует, однако забывать, что реализация намеченных плановых" price="1 600" weight="750"/>
-          <Card img="/images/shrimps.png" title="Креветки по-королевски в лимонном соке" description="Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу" price="1 820" weight="350"/>
-          <Card img="/images/oysters.png" title="Устрицы по рокфеллеровски" description="Значимость этих проблем настолько очевидна, что укрепление и развитие структуры " price="2 700" weight="500"/>
-          <Card img="/images/oysters.png" title="Устрицы по рокфеллеровски" description="Значимость этих проблем настолько очевидна, что укрепление и развитие структуры " price="2 700" weight="500"/>
-          <Card img="/images/ribs.png" title="Свиные ребрышки на гриле с зеленью" description="Не следует, однако забывать, что реализация намеченных плановых" price="1 600" weight="750"/>
-          <Card img="/images/shrimps.png" title="Креветки по-королевски в лимонном соке" description="Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу" price="1 820" weight="350"/>
-          <Card img="/images/oysters.png" title="Устрицы по рокфеллеровски" description="Значимость этих проблем настолько очевидна, что укрепление и развитие структуры " price="2 700" weight="500"/>
+          {products.map(item => {
+            return (
+              <Card 
+              key={item.id}
+              img={item.url}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              weight={item.weight} />
+            )
+          })}
         </div>
       </div>
     </main>
