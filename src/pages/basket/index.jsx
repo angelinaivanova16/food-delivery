@@ -2,20 +2,23 @@ import './basket.css'
 
 function Basket () {
   return (
-    <main className='basket-main'>
-      <header>
-        <div className='basket-arrow'></div>
-        <h1 className='basket-title'>Корзина с выбранными товарами</h1>
-      </header>
+    <div className='basket-container'>
+      <div className='basket-wrapper'>
+        <header className='basket-header'>
+          <div className='basket-arrow'></div>
+          <h1 className='basket-title'>Корзина с выбранными товарами</h1>
+        </header>
 
-      <div className='basket-list'></div>
+        <main className='basket-list'></main>
+      </div>
 
-      <footer>
-        <hr className='basket-line' />
-        <p className='basket-order'>Заказ на сумму: <span>6 220 ₽</span></p>
+      <hr className='basket-line' />
+
+      <footer className='basket-footer'>
+        <p className='basket-order'>Заказ на сумму: <span className='basket-price'>6 220 ₽</span></p>
         <button className='basket-button'>Оформить заказ</button>
       </footer>
-    </main>
+    </div>
   )
 }
 
