@@ -3,17 +3,12 @@
   src: url("./../../../public/fonts/Montserrat-Bold.ttf");
  }
  @font-face {
-  font-family: Montserrat-Medium;
-  src: url("./../../../public/fonts/Montserrat-Medium.ttf");
- }
- @font-face {
   font-family: Montserrat-Regular;
   src: url("./../../../public/fonts/Montserrat-Regular.ttf");
  }
 
 .basket-container {
   width: 1440px;
-  height: 100vh;
   background-color: #161516;
 }
 
@@ -47,6 +42,12 @@
   background-repeat: no-repeat;
   background-size: 15px 10px;
   background-position: center;
+}
+
+.basket-list {
+  height: calc(100vh - 180px);
+  overflow-x: auto;
+
 }
 
 .basket-line {

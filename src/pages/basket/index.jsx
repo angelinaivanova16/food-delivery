@@ -1,4 +1,6 @@
+import CardBasket from '../../components/elements/cardBasket';
 import './basket.css'
+import { products } from '../../products';
 
 function Basket () {
   return (
@@ -9,7 +11,17 @@ function Basket () {
           <h1 className='basket-title'>Корзина с выбранными товарами</h1>
         </header>
 
-        <main className='basket-list'></main>
+        <main className='basket-list'>
+        {products.map(item => {
+            return (
+              <CardBasket 
+              key={item.id}
+              img={item.url}
+              title={item.title}
+              price={item.price} />
+            )
+          })}
+        </main>
       </div>
 
       <hr className='basket-line' />
