@@ -1,6 +1,7 @@
-import CardBasket from '../../components/elements/cardBasket';
 import './basket.css'
+import CardBasket from '../../components/elements/cardBasket';
 import { products } from '../../products';
+import Button from '../../components/ui/button';
 
 function Basket () {
   return (
@@ -28,7 +29,8 @@ function Basket () {
 
       <footer className='basket-footer'>
         <p className='basket-order'>Заказ на сумму: <span className='basket-price'>6 220 ₽</span></p>
-        <button className='basket-button'>Оформить заказ</button>
+        {/* <button className='basket-button'>Оформить заказ</button> */}
+        <Button />
       </footer>
     </div>
   )
