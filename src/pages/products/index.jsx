@@ -1,6 +1,7 @@
 import './products.css'
 import { products } from '../../products';
 import Card from '../../components/elements/card';
+import { Link } from "react-router-dom";
 
 function Products () {
   return (
@@ -13,7 +14,9 @@ function Products () {
               <p>3 товара</p>
               <p>на сумму 3 500 ₽</p>
             </div>
-            <div className='header-basket-image'></div>
+            <Link to={'/basket'}>
+              <div className='header-basket-image'></div>
+            </Link>
           </div>
         </header>
 

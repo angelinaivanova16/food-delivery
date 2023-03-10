@@ -8,7 +8,7 @@
  }
 
 .basket-container {
-  width: 1440px;
+  /* width: 1440px; */
   margin: 0 auto;
   background-color: #161516;
 }
@@ -59,16 +59,17 @@
 
 .basket-list::-webkit-scrollbar {
   width: 2px;
-  background-color: #D58C51;
+  background-color: transparent;
+  padding-left: 5px;
 }
 
 .basket-list::-webkit-scrollbar-thumb {
-  background-color: #FFFFFF;
+  background-color: transparent;
   border-radius: 10px;
 }
 
 .basket-line {
-  width: 1440px;
+  /* width: 1440px; */
   height: 1px;
   border: none;
   color: #D58C51;
