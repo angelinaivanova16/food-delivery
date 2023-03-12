@@ -7,11 +7,6 @@ import React, { useState } from 'react';
 function Products () {
   const [count, setCount] = useState(0);
   const [countPrice, setCountPrice] = useState(0);
-  let p;
-  const getPrice = () => {
-    setCount(count + 1);
-    setCountPrice(countPrice + p)
-  }
 
   return (
     <main className="main">
@@ -32,16 +27,18 @@ function Products () {
         <div className='products-list'>
           {products.map(item => {
             return (
-              // <Card click={() => setCount(count + 1)}
-              <Card click={getPrice}
+              <Card click={() => {
+                setCount(count + 1);
+                setCountPrice(countPrice + parseInt(item.price.split(/\s+/).join('')));
+              }
+              }
               key={item.id}
               img={item.url}
               title={item.title}
               description={item.description}
               price={item.price}
-              weight={item.weight
-              } />
-            )
+              weight={item.weight} />
+              )
           })}
         </div>
       </div>
