@@ -1,12 +1,10 @@
 import './reset.css'
-// import Products from './pages/products';
-import Basket from './pages/basket';
+import Products from './pages/products';
 
 function App() {
   return (
     <div className='App'>
-      {/* <Products /> */}
-      <Basket />
+      <Products />
     </div>
   );
 }

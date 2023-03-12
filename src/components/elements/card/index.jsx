@@ -1,8 +1,8 @@
 import './card.css'
 
-function Card({img, title, description, price, weight}) {
+function Card({img, title, description, price, weight, click}) {
   return (
-    <div className="card">
+    <div onClick={click} className="card">
       <div className='card-wrapper'>
         <img className='card-image' src={img} alt="foodImage" />
         <h1 className='card-title'>{title}</h1>

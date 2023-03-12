@@ -1,13 +1,15 @@
-import CardBasket from '../../components/elements/cardBasket';
 import './basket.css'
+import CardBasket from '../../components/elements/cardBasket';
 import { products } from '../../products';
+import Button from '../../components/ui/button';
+import { Link } from "react-router-dom";
 
 function Basket () {
   return (
     <div className='basket-container'>
       <div className='basket-wrapper'>
         <header className='basket-header'>
-          <div className='basket-arrow'></div>
+          <Link to={'/products'}><div className='basket-arrow'></div></Link>
           <h1 className='basket-title'>Корзина с выбранными товарами</h1>
         </header>
 
@@ -28,7 +30,8 @@ function Basket () {
 
       <footer className='basket-footer'>
         <p className='basket-order'>Заказ на сумму: <span className='basket-price'>6 220 ₽</span></p>
-        <button className='basket-button'>Оформить заказ</button>
+        {/* <button className='basket-button'>Оформить заказ</button> */}
+        <Button btnName='Оформить заказ'/>
       </footer>
     </div>
   )
