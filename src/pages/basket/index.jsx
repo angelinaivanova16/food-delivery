@@ -1,6 +1,6 @@
 import './basket.css'
 import CardBasket from '../../components/elements/cardBasket';
-import { products } from '../../products';
+// import { products } from '../../products';
 import Button from '../../components/ui/button';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -17,11 +17,11 @@ function Basket () {
         </header>
 
         <main className='basket-list'>
-        {products.map(item => {
+        {productsBasket.map(item => {
             return (
               <CardBasket 
               key={item.id}
-              img={item.url}
+              img={item.img}
               title={item.title}
               price={item.price} />
             )

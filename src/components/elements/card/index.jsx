@@ -9,7 +9,7 @@ function Card({img, title, description, price, weight, click, id}) {
     const item = {
       id: id,
       title: title,
-      urlImg: img,
+      img: img,
       price: price
     }
 
@@ -24,8 +24,8 @@ function Card({img, title, description, price, weight, click, id}) {
         <p className='card-subtitle'>{description}</p>
         <div className='card-price'>
           <p>{price} ₽ <span className='card-price-weight'>/ {weight} г.</span></p>
-          <button onClick={click} className='card-btn'>+</button>
-          {/* <button onClick={addProduct} className='card-btn'>+</button> */}
+          {/* <button onClick={click} className='card-btn'>+</button>  до homework_06 без redux делала так */}
+          <button onClick={addProduct} className='card-btn'>+</button>
         </div>
       </div>
     </div>
@@ -33,4 +33,3 @@ function Card({img, title, description, price, weight, click, id}) {
 }
 
 export default Card;
-// export default { addProduct };

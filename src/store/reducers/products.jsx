@@ -11,7 +11,7 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     addProductsBasket: (state, payload) => {
-      console.log('payload', payload);
+      console.log(payload);
       state.basketProducts.push(payload.payload)
     }
   }
