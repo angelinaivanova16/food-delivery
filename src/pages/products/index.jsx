@@ -1,12 +1,30 @@
 import './products.css'
-import { products } from '../../products';
+// import { products } from '../../products';
 import Card from '../../components/elements/card';
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+// import { addProductsBasket } from '../../store/reducers/products';
+// import { useDispatch } from 'react-redux';
 
 function Products () {
+  const products = useSelector(state => state.products.products)
+
   const [count, setCount] = useState(0);
   const [countPrice, setCountPrice] = useState(0);
+
+  // const dispatch = useDispatch();
+
+  // const addProduct = () => {
+  //   const item = {
+  //     id: id,
+  //     title: title,
+  //     urlImg: img,
+  //     price: price
+  //   }
+
+  //   dispatch(addProductsBasket(item));
+  // }
 
   return (
     <main className="main">
@@ -30,6 +48,7 @@ function Products () {
               <Card click={() => {
                 setCount(count + 1);
                 setCountPrice(countPrice + parseInt(item.price.split(/\s+/).join('')));
+                // addProduct();
               }
               }
               key={item.id}

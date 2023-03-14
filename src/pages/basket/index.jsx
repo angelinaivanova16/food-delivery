@@ -3,8 +3,11 @@ import CardBasket from '../../components/elements/cardBasket';
 import { products } from '../../products';
 import Button from '../../components/ui/button';
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Basket () {
+  const productsBasket = useSelector( state => state.products.basketProducts)
+
   return (
     <div className='basket-container'>
       <div className='basket-wrapper'>
