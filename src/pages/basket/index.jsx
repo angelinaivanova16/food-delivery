@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 function Basket () {
-  const productsBasket = useSelector( state => state.products.basketProducts)
+  const productsBasket = useSelector( state => state.products.basketProducts);
 
   return (
     <div className='basket-container'>
@@ -20,7 +20,8 @@ function Basket () {
         {productsBasket.map(item => {
             return (
               <CardBasket 
-              key={item.id}
+              key={item.idx}
+              id={item.idx}
               img={item.img}
               title={item.title}
               price={item.price} />

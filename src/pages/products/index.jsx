@@ -41,6 +41,7 @@ function Products () {
               // }
               // }           до homework_06 без redux делала так
               key={item.id}
+              id={item.id}
               img={item.url}
               title={item.title}
               description={item.description}

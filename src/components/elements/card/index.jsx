@@ -1,13 +1,15 @@
 import './card.css'
 import { addProductsBasket } from '../../../store/reducers/products';
 import { useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
 
-function Card({img, title, description, price, weight, click, id}) {
+function Card({id, img, title, description, price, weight, click}) {
   const dispatch = useDispatch();
 
   const addProduct = () => {
     const item = {
       id: id,
+      idx: uuid(),
       title: title,
       img: img,
       price: price

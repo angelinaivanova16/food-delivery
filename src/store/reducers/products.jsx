@@ -11,12 +11,18 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     addProductsBasket: (state, payload) => {
-      console.log(payload);
+      // console.log(payload);
       state.basketProducts.push(payload.payload)
+    },
+    removeProductsBasket: (state, payload) => {
+      console.log(payload);
+      state.basketProducts = state.basketProducts.filter((item) => {
+        return item.idx !== payload.payload;
+      })
     }
   }
 })
 
-export const { addProductsBasket } = productsSlice.actions;
+export const { addProductsBasket, removeProductsBasket } = productsSlice.actions;
 
 export default productsSlice.reducer;
