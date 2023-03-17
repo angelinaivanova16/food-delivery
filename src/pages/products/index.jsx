@@ -1,17 +1,13 @@
 import './products.css'
-// import { products } from '../../products';
 import Card from '../../components/elements/card';
 import { Link } from "react-router-dom";
-// import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-// import { addProductsBasket } from '../../store/reducers/products';
-// import { useDispatch } from 'react-redux';
 
 function Products () {
-  const products = useSelector(state => state.products.products)
+  const products = useSelector(state => state.products.products);
+  const count = useSelector(state => state.products.countProducts);
+  const price = useSelector(state => state.products.countPrice)
 
-  // const [count, setCount] = useState(0);
-  // const [countPrice, setCountPrice] = useState(0);
 
   return (
     <main className="main">
@@ -20,10 +16,8 @@ function Products () {
           <h1 className='header-title'>наша продукция</h1>
           <div className="header-basket">
             <div className='header-basket-text'>
-              {/* <p>{count} товар(а)</p>
-              <p>на сумму {countPrice} ₽</p> */}
-              <p>0 товар(а)</p>
-              <p>на сумму 0 ₽</p>
+              <p>{count} товар(а)</p>
+              <p>на сумму {price} ₽</p>
             </div>
             <Link to={'/basket'}>
               <div className='header-basket-image'></div>
@@ -34,12 +28,7 @@ function Products () {
         <div className='products-list'>
           {products.map(item => {
             return (
-              <Card 
-              // click={() => {
-              //   setCount(count + 1);
-              //   setCountPrice(countPrice + parseInt(item.price.split(/\s+/).join('')));
-              // }
-              // }           до homework_06 без redux делала так
+              <Card
               key={item.id}
               id={item.id}
               img={item.url}

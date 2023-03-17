@@ -7,7 +7,6 @@ function CardBasket ({img, title, price, id}) {
   const dispatch = useDispatch();
 
   const removeProduct = () => {
-    console.log('удаление')
     dispatch(removeProductsBasket(id));
   }
 

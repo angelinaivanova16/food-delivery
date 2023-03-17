@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 
 function Basket () {
   const productsBasket = useSelector( state => state.products.basketProducts);
+  const price = useSelector( state => state.products.countPrice);
 
   return (
     <div className='basket-container'>
@@ -33,7 +34,7 @@ function Basket () {
       <hr className='basket-line' />
 
       <footer className='basket-footer'>
-        <p className='basket-order'>Заказ на сумму: <span className='basket-price'>6 220 ₽</span></p>
+        <p className='basket-order'>Заказ на сумму: <span className='basket-price'>{price}</span></p>
         {/* <button className='basket-button'>Оформить заказ</button> */}
         <Button btnName='Оформить заказ'/>
       </footer>
