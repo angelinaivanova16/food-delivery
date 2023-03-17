@@ -1,10 +1,14 @@
 import './basket.css'
 import CardBasket from '../../components/elements/cardBasket';
-import { products } from '../../products';
+// import { products } from '../../products';
 import Button from '../../components/ui/button';
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Basket () {
+  const productsBasket = useSelector( state => state.products.basketProducts);
+  const price = useSelector( state => state.products.countPrice);
+
   return (
     <div className='basket-container'>
       <div className='basket-wrapper'>
@@ -14,11 +18,12 @@ function Basket () {
         </header>
 
         <main className='basket-list'>
-        {products.map(item => {
+        {productsBasket.map(item => {
             return (
               <CardBasket 
-              key={item.id}
-              img={item.url}
+              key={item.idx}
+              id={item.idx}
+              img={item.img}
               title={item.title}
               price={item.price} />
             )
@@ -29,7 +34,7 @@ function Basket () {
       <hr className='basket-line' />
 
       <footer className='basket-footer'>
-        <p className='basket-order'>Заказ на сумму: <span className='basket-price'>6 220 ₽</span></p>
+        <p className='basket-order'>Заказ на сумму: <span className='basket-price'>{price}</span></p>
         {/* <button className='basket-button'>Оформить заказ</button> */}
         <Button btnName='Оформить заказ'/>
       </footer>
