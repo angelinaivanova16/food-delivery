@@ -15,6 +15,10 @@
   padding-bottom: 31px;
 }
 
+.card-basket-link {
+  text-decoration: none;
+}
+
 .card-basket-title {
   width: 310px;
   font-family: Montserrat-Medium;
@@ -22,6 +26,9 @@
   line-height: 21px;
   color: #FFFFFF;
   margin-right: 116px;
+}
+.card-basket-title:hover {
+  color: #D58C51;
 }
 
 .card-basket-image {

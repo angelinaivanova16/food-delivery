@@ -15,12 +15,17 @@
   transition: 0.3s;
 }
 
-.card:hover {
+.card-product-container:hover {
   color: #D58C51;
 }
 
 .card-wrapper {
   padding: 43px 21px 36px 21px;
+}
+
+.card-product-container {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .card-image {
