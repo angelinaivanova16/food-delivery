@@ -1,6 +1,5 @@
 import './basket.css'
 import CardBasket from '../../components/elements/cardBasket';
-// import { products } from '../../products';
 import Button from '../../components/ui/button';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -35,7 +34,6 @@ function Basket () {
 
       <footer className='basket-footer'>
         <p className='basket-order'>Заказ на сумму: <span className='basket-price'>{price}</span></p>
-        {/* <button className='basket-button'>Оформить заказ</button> */}
         <Button btnName='Оформить заказ'/>
       </footer>
     </div>
