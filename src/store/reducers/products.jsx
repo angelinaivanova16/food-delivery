@@ -32,6 +32,9 @@ export const productsSlice = createSlice({
     showProductDescription: (state, payload) => {
       // console.log(payload.payload)
       state.descriptionProduct.push(payload.payload);
+    },
+    clearDescription: (state) => {
+      state.descriptionProduct.pop();
     }
   }
 })

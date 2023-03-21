@@ -3,15 +3,23 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/ui/button';
 import CardDescription from '../../components/elements/cardDescription';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 function Description () {
   const productDescr = useSelector( state => state.products.descriptionProduct);
+
+  const dispatch = useDispatch();
+
+  const clearDescription = () => {
+    dispatch(clearDescription());
+  }
+
 
   return (
     <div className='description-container'>
       <div className='description-wrapper'>
         <header className='description-header'>
-          <Link to={'/products'}><div className='basket-arrow'></div></Link>
+          <Link to={'/products'} onClick={clearDescription}><div className='basket-arrow'></div></Link>
           <div className='description-rightside'>
             <div className='header-description-text'>
               <p>0 товар(а)</p>
@@ -20,7 +28,7 @@ function Description () {
             <Link to={'/basket'}>
               <div className='header-basket-image'></div>
             </Link>
-            <Button btnName='Выйти'/>
+            <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
           </div>
         </header>
 
