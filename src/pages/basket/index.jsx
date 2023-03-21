@@ -24,7 +24,9 @@ function Basket () {
               id={item.idx}
               img={item.img}
               title={item.title}
-              price={item.price} />
+              full={item.full}
+              price={item.price}
+              weight={item.weight} />
             )
           })}
         </main>

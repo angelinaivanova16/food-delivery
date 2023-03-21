@@ -30,15 +30,15 @@ export const productsSlice = createSlice({
       }, 0)
     },
     showProductDescription: (state, payload) => {
-      // console.log(payload.payload)
       state.descriptionProduct.push(payload.payload);
+      console.log(payload.payload)
     },
     clearDescription: (state) => {
-      state.descriptionProduct.pop();
+      // state.descriptionProduct.pop();
     }
   }
 })
 
-export const { addProductsBasket, removeProductsBasket, showProductDescription } = productsSlice.actions;
+export const { addProductsBasket, removeProductsBasket, showProductDescription, clearDescription } = productsSlice.actions;
 
 export default productsSlice.reducer;

@@ -14,7 +14,8 @@ function Card({id, img, title, description, full, price, weight}) {
       idx: uuid(),
       title: title,
       img: img,
-      price: price
+      price: price,
+      full: full
     }
 
     dispatch(addProductsBasket(item));
@@ -44,7 +45,6 @@ function Card({id, img, title, description, full, price, weight}) {
         </Link>
         <div className='card-price'>
           <p>{price} ₽ <span className='card-price-weight'>/ {weight} г.</span></p>
-          {/* <button onClick={click} className='card-btn'>+</button>  до homework_06 без redux делала так */}
           <button onClick={addProduct} className='card-btn'>+</button>
         </div>
       </div>

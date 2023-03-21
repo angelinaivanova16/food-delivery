@@ -2,7 +2,6 @@ import Button from '../../ui/button';
 import './cardDescription.css'
 
 function CardDescription ({img, title, full, price, weight}) {
-  // console.log(full);
   return(
     <div className='card-description'>
       <img className='card-description-image' src={img} alt="foodImage" />
