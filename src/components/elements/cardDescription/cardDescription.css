@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Montserrat-Regular;
   color: #FFFFFF; 
 }
 
@@ -30,4 +31,23 @@
 
 .card-description-text {
   width: 528px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card-description-count {
+  display: flex;
+}
+
+.card-description-price {
+  font-family: Montserrat-Medium;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+.card-description-weight {
+  font-family: Montserrat-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 68px;
 }

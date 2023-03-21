@@ -9,9 +9,9 @@ function CardDescription ({img, title, full, price, weight}) {
       <div>
         <h2 className='card-description-title'>{title}</h2>
         <p className='card-description-text'>{full}</p>
-        <div>
-          <p>{price} ₽ <span className='card-price-weight'>/ {weight} г.</span></p>
-          <Button>В корзину</Button>
+        <div className='card-description-count'>
+          <p className='card-description-price'>{price} ₽ <span className='card-description-weight'>/ {weight} г.</span></p>
+          <Button btnName='В корзину'/>
         </div>
       </div>
     </div>
