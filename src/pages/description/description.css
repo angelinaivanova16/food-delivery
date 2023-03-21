@@ -16,14 +16,14 @@
 .description-wrapper {
   width: 1304px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 28px;
 }
 
 .description-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .description-rightside {
@@ -31,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
 }
 
 .header-description-text {

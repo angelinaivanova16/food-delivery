@@ -19,6 +19,7 @@
 .card-description-image {
   width: 501px;
   height: 503px;
+  padding: 17px 0 0 72px;
 }
 
 .card-description-title {
@@ -27,16 +28,20 @@
   font-size: 30px;
   line-height: 37px;
   color: #D58C51;
+  margin-bottom: 22px;
 }
 
 .card-description-text {
   width: 528px;
   font-size: 14px;
   line-height: 17px;
+  margin-bottom: 60px;
 }
 
 .card-description-count {
   display: flex;
+  align-items: center;
+  margin-bottom: -6px;
 }
 
 .card-description-price {
