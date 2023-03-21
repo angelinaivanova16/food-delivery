@@ -5,7 +5,8 @@ const initialState = {
   products: products,
   basketProducts: [],
   countProducts: 0,
-  countPrice: 0
+  countPrice: 0,
+  descriptionProduct: [],
 }
 
 export const productsSlice = createSlice({
@@ -27,10 +28,14 @@ export const productsSlice = createSlice({
       state.countPrice = state.basketProducts.reduce((acc, current) => {
         return acc + parseInt(current.price.split(/\s+/).join(''));
       }, 0)
+    },
+    showProductDescription: (state, payload) => {
+      // console.log(payload.payload)
+      state.descriptionProduct.push(payload.payload);
     }
   }
 })
 
-export const { addProductsBasket, removeProductsBasket } = productsSlice.actions;
+export const { addProductsBasket, removeProductsBasket, showProductDescription } = productsSlice.actions;
 
 export default productsSlice.reducer;

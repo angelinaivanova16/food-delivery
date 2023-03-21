@@ -1,10 +1,11 @@
 import './card.css'
 import { addProductsBasket } from '../../../store/reducers/products';
+import { showProductDescription } from '../../../store/reducers/products';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
 import { Link } from "react-router-dom";
 
-function Card({id, img, title, description, price, weight, click}) {
+function Card({id, img, title, description, full, price, weight}) {
   const dispatch = useDispatch();
 
   const addProduct = () => {
@@ -19,10 +20,24 @@ function Card({id, img, title, description, price, weight, click}) {
     dispatch(addProductsBasket(item));
   }
 
+  const showDescription = () => {
+    const itemDescription = {
+      id: id,
+      idx: uuid(),
+      title: title,
+      description: description,
+      full: full,
+      img: img,
+      price: price,
+      weight: weight,
+    }
+    dispatch(showProductDescription(itemDescription));
+  }
+
   return (
     <div className="card">
       <div className='card-wrapper'>
-        <Link to={'/description'} className='card-product-container'>
+        <Link to={'/description'} onClick={showDescription} className='card-product-container'>
           <img className='card-image' src={img} alt="foodImage" />
           <h1 className='card-title'>{title}</h1>
           <p className='card-subtitle'>{description}</p>

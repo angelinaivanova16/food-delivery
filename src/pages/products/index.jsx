@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 function Products () {
   const products = useSelector(state => state.products.products);
   const count = useSelector(state => state.products.countProducts);
-  const price = useSelector(state => state.products.countPrice)
+  const price = useSelector(state => state.products.countPrice);
 
 
   return (
@@ -34,6 +34,7 @@ function Products () {
               img={item.url}
               title={item.title}
               description={item.description}
+              full={item.full}
               price={item.price}
               weight={item.weight} />
               )
