@@ -31,14 +31,13 @@ export const productsSlice = createSlice({
     },
     showProductDescription: (state, payload) => {
       state.descriptionProduct.push(payload.payload);
-      console.log(payload.payload)
     },
-    clearDescription: (state) => {
-      // state.descriptionProduct.pop();
+    clearProductDescription: (state, payload) => {
+      state.descriptionProduct.pop();
     }
   }
 })
 
-export const { addProductsBasket, removeProductsBasket, showProductDescription, clearDescription } = productsSlice.actions;
+export const { addProductsBasket, removeProductsBasket, showProductDescription, clearProductDescription } = productsSlice.actions;
 
 export default productsSlice.reducer;
