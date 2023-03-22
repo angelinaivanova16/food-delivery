@@ -14,6 +14,7 @@ function Basket () {
         <header className='basket-header'>
           <Link to={'/products'}><div className='basket-arrow'></div></Link>
           <h1 className='basket-title'>Корзина с выбранными товарами</h1>
+          <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
         </header>
 
         <main className='basket-list'>

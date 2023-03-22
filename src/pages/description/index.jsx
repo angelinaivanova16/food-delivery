@@ -29,8 +29,8 @@ function Description () {
               <p>на сумму {price} ₽</p>
             </div>
             <Link to={'/basket'} onClick={clearDescription}>
-              {/* <div className='header-basket-image'></div> */}
-              <div className='description-image'></div>
+              <div className='header-basket-image'></div>
+              {/* <div className='description-image'></div> */}
             </Link>
             <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
           </div>

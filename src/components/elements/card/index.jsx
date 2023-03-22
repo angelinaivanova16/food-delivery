@@ -1,11 +1,14 @@
 import './card.css'
 import { addProductsBasket } from '../../../store/reducers/products';
 import { showProductDescription } from '../../../store/reducers/products';
+import { removeProductsBasket } from '../../../store/reducers/products';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import uuid from 'react-uuid';
 import { Link } from "react-router-dom";
 
 function Card({id, img, title, description, full, price, weight}) {
+  const [isCardAddedToBasket, setisCardAddedToBasket] = useState(false)
   const dispatch = useDispatch();
 
   const addProduct = () => {
@@ -17,8 +20,21 @@ function Card({id, img, title, description, full, price, weight}) {
       price: price,
       full: full
     }
-
     dispatch(addProductsBasket(item));
+    setisCardAddedToBasket(true);
+  }
+
+  let removefromBasket = () => {
+    dispatch(removeProductsBasket(id));
+    setisCardAddedToBasket(false);
+  }
+
+  const renderBasketControlBtn = () => {
+    if (isCardAddedToBasket) {
+      return <button onClick={removefromBasket} className='card-btn'>-</button>
+    } else {
+      return <button onClick={addProduct} className='card-btn'>+</button>
+    }
   }
 
   const showDescription = () => {
@@ -45,7 +61,8 @@ function Card({id, img, title, description, full, price, weight}) {
         </Link>
         <div className='card-price'>
           <p>{price} ₽ <span className='card-price-weight'>/ {weight} г.</span></p>
-          <button onClick={addProduct} className='card-btn'>+</button>
+          {renderBasketControlBtn()}
+          {/* <button onClick={addProduct} className='card-btn'>+</button> */}
         </div>
       </div>
     </div>

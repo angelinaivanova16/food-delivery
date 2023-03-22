@@ -2,6 +2,7 @@ import './products.css'
 import Card from '../../components/elements/card';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import Button from '../../components/ui/button';
 
 function Products () {
   const products = useSelector(state => state.products.products);
@@ -22,6 +23,7 @@ function Products () {
             <Link to={'/basket'}>
               <div className='header-basket-image'></div>
             </Link>
+            <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
           </div>
         </header>
 

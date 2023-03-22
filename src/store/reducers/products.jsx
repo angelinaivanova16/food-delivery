@@ -21,6 +21,8 @@ export const productsSlice = createSlice({
       }, 0)
     },
     removeProductsBasket: (state, payload) => {
+      console.log(payload)
+
       state.basketProducts = state.basketProducts.filter((item) => {
         return item.idx !== payload.payload;
       })
@@ -34,7 +36,7 @@ export const productsSlice = createSlice({
     },
     clearProductDescription: (state, payload) => {
       state.descriptionProduct.pop();
-    }
+    },
   }
 })
 
