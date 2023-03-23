@@ -24,7 +24,7 @@ export const productsSlice = createSlice({
       console.log(payload)
 
       state.basketProducts = state.basketProducts.filter((item) => {
-        return item.idx !== payload.payload;
+        return item.id !== payload.payload;
       })
       state.countProducts = state.basketProducts.length;
       state.countPrice = state.basketProducts.reduce((acc, current) => {

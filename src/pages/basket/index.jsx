@@ -22,7 +22,7 @@ function Basket () {
             return (
               <CardBasket 
               key={item.idx}
-              id={item.idx}
+              id={item.id}
               img={item.img}
               title={item.title}
               full={item.full}
