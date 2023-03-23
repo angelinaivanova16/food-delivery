@@ -1,10 +1,13 @@
 import Button from '../../ui/button';
 import './cardDescription.css'
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import { addProductsBasket } from '../../../store/reducers/products';
+import { removeProductsBasket } from '../../../store/reducers/products';
 import uuid from 'react-uuid';
 
 function CardDescription ({id, img, title, full, price, weight}) {
+  const [isCardAddedToBasket, setisCardAddedToBasket] = useState(false)
   const dispatch = useDispatch();
 
   const addProduct = () => {
@@ -18,6 +21,20 @@ function CardDescription ({id, img, title, full, price, weight}) {
     }
 
     dispatch(addProductsBasket(item));
+    setisCardAddedToBasket(true);
+  }
+
+  let removefromBasket = () => {
+    dispatch(removeProductsBasket(id));
+    setisCardAddedToBasket(false);
+  }
+
+  const renderBasketControlBtn = () => {
+    if (isCardAddedToBasket) {
+      return <Button btnName='Удалить из корзины' click={removefromBasket}/>
+    } else {
+      return <Button btnName='В корзину' click={addProduct}/>
+    }
   }
 
   return(
@@ -28,7 +45,7 @@ function CardDescription ({id, img, title, full, price, weight}) {
         <p className='card-description-text'>{full}</p>
         <div className='card-description-count'>
           <p className='card-description-price'>{price} ₽ <span className='card-description-weight'>/ {weight} г.</span></p>
-          <Button btnName='В корзину' click={addProduct}/>
+          {renderBasketControlBtn()}
         </div>
       </div>
     </div>

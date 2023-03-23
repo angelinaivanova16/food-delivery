@@ -1,10 +1,10 @@
 import './reset.css'
-import Products from './pages/products';
+import Authorization from './pages/authorization';
 
 function App() {
   return (
     <div className='App'>
-      <Products />
+      <Authorization />
     </div>
   );
 }
