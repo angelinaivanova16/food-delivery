@@ -54,7 +54,7 @@
   font-size: 31px;
   line-height: 38px;
   color: #161516;
-  margin-bottom: 36px;
+  margin-bottom: 21px;
 }
 
 .form-registration__item {
@@ -62,7 +62,7 @@
   height: 39px;
   border: 1px solid #D58C51;
   border-radius: 61px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .form-registration__item::placeholder {
@@ -106,6 +106,7 @@
 
 .form-registration__agreement {
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .form-registration__agree {
@@ -129,4 +130,8 @@
 }
 .form-registration__btn:hover {
   opacity: 0.8;
+}
+
+.higher {
+  margin-top: 10px;
 }
