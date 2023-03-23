@@ -1,0 +1,58 @@
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("./../../../../public/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("./../../../../public/fonts/Montserrat-Regular.ttf");
+}
+
+
+.card-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat-Regular;
+  color: #FFFFFF; 
+}
+
+.card-description-image {
+  width: 501px;
+  height: 503px;
+  padding: 17px 0 0 72px;
+}
+
+.card-description-title {
+  width: 414px;
+  font-family: Montserrat-Medium;
+  font-size: 30px;
+  line-height: 37px;
+  color: #D58C51;
+  margin-bottom: 22px;
+}
+
+.card-description-text {
+  width: 528px;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 60px;
+}
+
+.card-description-count {
+  display: flex;
+  align-items: center;
+  margin-bottom: -6px;
+}
+
+.card-description-price {
+  font-family: Montserrat-Medium;
+  font-size: 23px;
+  line-height: 28px;
+}
+
+.card-description-weight {
+  font-family: Montserrat-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 68px;
+}

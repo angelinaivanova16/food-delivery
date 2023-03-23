@@ -8,19 +8,18 @@
  }
 
 .basket-container {
-  /* width: 1440px; */
   margin: 0 auto;
   background-color: #161516;
 }
 
 .basket-wrapper {
-  width: 860px;
-  margin: 0 auto;
   color: #FFFFFF;
 }
 
 .basket-header {
   height: 129px;
+  width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +31,7 @@
   font-family: Montserrat-Bold;
   font-size: 31px;
   line-height: 38px;
-  padding-right: 94px;
+  padding-right: 272px;
 }
 
 .basket-arrow {
@@ -54,7 +53,8 @@
 .basket-list {
   height: calc(100vh - 228px);
   overflow-x: auto;
-  /* padding-bottom: 18px; */
+  width: 860px;
+  margin: 0 auto;
 }
 
 .basket-list::-webkit-scrollbar {
@@ -69,7 +69,6 @@
 }
 
 .basket-line {
-  /* width: 1440px; */
   height: 1px;
   border: none;
   color: #D58C51;

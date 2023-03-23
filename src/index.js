@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import Products from './pages/products'
 import Basket from './pages/basket'
+import Description from './pages/description';
+import Authorization from './pages/authorization';
+import Registration from './pages/registration';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -24,6 +27,18 @@ const router = createBrowserRouter([
   {
     path: "/basket",
     element: <Basket />,
+  },
+  {
+    path: "/description",
+    element: <Description />,
+  },
+  {
+    path: "/authorization",
+    element: <Authorization />,
+  },
+  {
+    path: "/registration",
+    element: <Registration />,
   },
 ]);
 

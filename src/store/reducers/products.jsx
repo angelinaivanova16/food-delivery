@@ -5,7 +5,8 @@ const initialState = {
   products: products,
   basketProducts: [],
   countProducts: 0,
-  countPrice: 0
+  countPrice: 0,
+  descriptionProduct: [],
 }
 
 export const productsSlice = createSlice({
@@ -20,17 +21,25 @@ export const productsSlice = createSlice({
       }, 0)
     },
     removeProductsBasket: (state, payload) => {
+      console.log(payload)
+
       state.basketProducts = state.basketProducts.filter((item) => {
-        return item.idx !== payload.payload;
+        return item.id !== payload.payload;
       })
       state.countProducts = state.basketProducts.length;
       state.countPrice = state.basketProducts.reduce((acc, current) => {
         return acc + parseInt(current.price.split(/\s+/).join(''));
       }, 0)
-    }
+    },
+    showProductDescription: (state, payload) => {
+      state.descriptionProduct.push(payload.payload);
+    },
+    clearProductDescription: (state, payload) => {
+      state.descriptionProduct.pop();
+    },
   }
 })
 
-export const { addProductsBasket, removeProductsBasket } = productsSlice.actions;
+export const { addProductsBasket, removeProductsBasket, showProductDescription, clearProductDescription } = productsSlice.actions;
 
 export default productsSlice.reducer;

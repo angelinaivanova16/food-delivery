@@ -2,11 +2,12 @@ import './products.css'
 import Card from '../../components/elements/card';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import Button from '../../components/ui/button';
 
 function Products () {
   const products = useSelector(state => state.products.products);
   const count = useSelector(state => state.products.countProducts);
-  const price = useSelector(state => state.products.countPrice)
+  const price = useSelector(state => state.products.countPrice);
 
 
   return (
@@ -22,6 +23,9 @@ function Products () {
             <Link to={'/basket'}>
               <div className='header-basket-image'></div>
             </Link>
+            <Link to={'/authorization'}>
+              <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
+            </Link>
           </div>
         </header>
 
@@ -34,6 +38,7 @@ function Products () {
               img={item.url}
               title={item.title}
               description={item.description}
+              full={item.full}
               price={item.price}
               weight={item.weight} />
               )
