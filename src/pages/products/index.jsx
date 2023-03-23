@@ -23,7 +23,9 @@ function Products () {
             <Link to={'/basket'}>
               <div className='header-basket-image'></div>
             </Link>
-            <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
+            <Link to={'/authorization'}>
+              <Button btnName='Выйти' bgcolor="transparent" color="#D58C51" border="1px solid #D58C51"/>
+            </Link>
           </div>
         </header>
 

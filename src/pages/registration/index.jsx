@@ -6,16 +6,16 @@ function checkFormRegistration(e) {
   const fieldPassword = document.getElementById('password')
   const notification1 = document.getElementById('notification1');
   const notification2 = document.getElementById('notification2');
-  // const btn = document.querySelector('.form-registration__btn');
+  const btn = document.getElementById('b');
   let hasEmpty = false; // Поля заполнены - это у нас будет false
 
   if(!fieldLogin.value) {   // если это пустое поле,
     notification1.textContent = 'Поле не должно быть пустым';
-    // btn.classList.add('higher');
+    btn.classList.add('higher2');
     hasEmpty = true;   // тогда true - значит поле пустое
   } else if(fieldLogin.value.length < 4) {
     notification1.textContent = 'Логин должен содержать не менее 4-х символов';
-    // btn.classList.add('higher');
+    btn.classList.add('higher2');
     hasEmpty = true;
   } else {
     notification1.textContent = '';
@@ -93,7 +93,7 @@ function Registration () {
           </div>
           <p className="form-registration__notification" id="notification3"></p>
 
-          <button className="form-registration__btn" type="submit" onClick={checkFormRegistration}>
+          <button className="form-registration__btn" type="submit" id='b' onClick={checkFormRegistration}>
             Зарегистрироваться
           </button>
         </div>
