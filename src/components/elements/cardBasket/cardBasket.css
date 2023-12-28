@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("./../../../../public/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("./../../../../public/fonts/Montserrat-Regular.ttf");
+}
+
+.card-basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 122px;
+  padding-bottom: 31px;
+}
+
+.card-basket-link {
+  text-decoration: none;
+}
+
+.card-basket-title {
+  width: 310px;
+  font-family: Montserrat-Medium;
+  font-size: 17px;
+  line-height: 21px;
+  color: #FFFFFF;
+  margin-right: 116px;
+}
+.card-basket-title:hover {
+  color: #D58C51;
+}
+
+.card-basket-image {
+  width: 122px;
+  height: 122px;
+}
+
+.card-basket-rightside {
+  width: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-basket-price {
+  font-family: Montserrat-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  color: #D58C51;
+}
+
+.card-basket-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #D58C51;
+  border-radius: 50px;
+  background-color: transparent;
+  background-image: url('../../../../public/svg/cross.svg');
+  background-repeat: no-repeat;
+  background-size: 15px 10px;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card-basket-btn:hover {
+  opacity: 0.4;
+}

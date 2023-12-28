@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("./../../../../public/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("./../../../../public/fonts/Montserrat-Regular.ttf");
+}
+
+.card {
+  width: 312px;
+  height: 552px;
+  border: 1px solid #D58C51;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-product-container:hover {
+  color: #D58C51;
+}
+
+.card-wrapper {
+  padding: 43px 21px 36px 21px;
+}
+
+.card-product-container {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.card-image {
+  width: 270px;
+  height: 271px;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  height: 42px;
+  font-family: Montserrat-Medium;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  height: 68px;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.card-price {
+  width: 263px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat-Medium;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+.card-price-weight {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card-btn {
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  font-size: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card-btn:hover {
+  background-color: #D58C51;
+}
