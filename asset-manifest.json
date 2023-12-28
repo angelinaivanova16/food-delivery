@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/food-delivery/static/css/main.72b10257.css",
-    "main.js": "/food-delivery/static/js/main.d019bb9d.js",
+    "main.js": "/food-delivery/static/js/main.a83cee18.js",
     "static/js/787.a878762a.chunk.js": "/food-delivery/static/js/787.a878762a.chunk.js",
     "static/media/Mask Group.jpg": "/food-delivery/static/media/Mask Group.667bcb2847aadbfa22b5.jpg",
     "static/media/Montserrat-Medium.ttf": "/food-delivery/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
@@ -14,11 +14,11 @@
     "index.html": "/food-delivery/index.html",
     "static/media/check.svg": "/food-delivery/static/media/check.8a3063c4d2944d026675.svg",
     "main.72b10257.css.map": "/food-delivery/static/css/main.72b10257.css.map",
-    "main.d019bb9d.js.map": "/food-delivery/static/js/main.d019bb9d.js.map",
+    "main.a83cee18.js.map": "/food-delivery/static/js/main.a83cee18.js.map",
     "787.a878762a.chunk.js.map": "/food-delivery/static/js/787.a878762a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.72b10257.css",
-    "static/js/main.d019bb9d.js"
+    "static/js/main.a83cee18.js"
   ]
 }
