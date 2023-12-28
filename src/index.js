@@ -8,46 +8,56 @@ import Description from './pages/description';
 import Authorization from './pages/authorization';
 import Registration from './pages/registration';
 import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+// import {
+//   createBrowserRouter,
+//   RouterProvider,
+// } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { HashRouter, Routes, Route } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/products",
-    element: <Products />,
-  },
-  {
-    path: "/basket",
-    element: <Basket />,
-  },
-  {
-    path: "/description",
-    element: <Description />,
-  },
-  {
-    path: "/authorization",
-    element: <Authorization />,
-  },
-  {
-    path: "/registration",
-    element: <Registration />,
-  },
-]);
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//   },
+//   {
+//     path: "/products",
+//     element: <Products />,
+//   },
+//   {
+//     path: "/basket",
+//     element: <Basket />,
+//   },
+//   {
+//     path: "/description",
+//     element: <Description />,
+//   },
+//   {
+//     path: "/authorization",
+//     element: <Authorization />,
+//   },
+//   {
+//     path: "/registration",
+//     element: <Registration />,
+//   },
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <HashRouter basename="/">
+      <Provider store={store}>
+        <Routes>
+          <Route
+              path="/"
+              element={ <App /> }
+            />
+        </Routes>
+        {/* <RouterProvider router={router} /> */}
+      </Provider>
+    </HashRouter>
   </React.StrictMode>
 );
 
