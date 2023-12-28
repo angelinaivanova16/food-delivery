@@ -1,3 +1,5 @@
+Проект food-delivery можно посмотреть здесь: https://angelinaivanova16.github.io/food-delivery/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
