@@ -54,6 +54,26 @@ root.render(
               path="/"
               element={ <App /> }
             />
+            <Route
+              path="/products"
+              element={ <Products /> }
+            />
+            <Route
+              path="/basket"
+              element={ <Basket /> }
+            />
+            <Route
+              path="/description"
+              element={ <Description /> }
+            />
+            <Route
+              path="/authorization"
+              element={ <Authorization /> }
+            />
+            <Route
+              path="/registration"
+              element={ <Registration /> }
+            />
         </Routes>
         {/* <RouterProvider router={router} /> */}
       </Provider>
